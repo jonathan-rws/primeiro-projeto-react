@@ -1,0 +1,42 @@
+[33mcommit 347c042d5b524a8cfef7e7b76e933bdb8809f3bc[m
+Author: Jonathan Martins <jonathan.rws@gmail.com>
+Date:   Sat Sep 11 09:57:24 2021 -0300
+
+    first commit
+
+[1mdiff --git a/src/components/RepositoryItem.jsx b/src/components/RepositoryItem.jsx[m
+[1mindex 1cc847a..60167fa 100644[m
+[1m--- a/src/components/RepositoryItem.jsx[m
+[1m+++ b/src/components/RepositoryItem.jsx[m
+[36m@@ -1,7 +1,12 @@[m
+[32m+[m
+ export function RepositoryItem(props){[m
+  return <li>[m
+   <strong>{props.repository.full_name}</strong>[m
+[32m+[m[41m  [m
+   <p>{props.repository.description}</p>[m
+   <a href={props.repository.html_url}>Acessar repositório</a>[m
+[32m+[m[32m <p>{props.repository.avatar_url}</p>[m
+[32m+[m
+ </li>[m
+[32m+[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/src/styles/repository.scss b/src/styles/repository.scss[m
+[1mindex fa6fd46..d75f8ae 100644[m
+[1m--- a/src/styles/repository.scss[m
+[1m+++ b/src/styles/repository.scss[m
+[36m@@ -20,9 +20,10 @@[m [mli{[m
+   }[m
+ [m
+   a{[m
+[31m-    display: inline-block ;[m
+[32m+[m[32m    display: block ;[m
+     margin-top: 16px;[m
+     text-decoration: none;[m
+     color: #8257e6;[m
+   }[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[41m+[m
